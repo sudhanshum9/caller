@@ -8,10 +8,10 @@ router = DefaultRouter()
 router.register('registeredUsers',views.UserProfileViewSet)
 router.register('contacts',views.UserContactViewSet)
 router.register('spam',views.SpamViewSet)
-router.register('globaldata',views.GlobalDatabase,basename='globaldata')
+#router.register('globaldata',views.GlobalDatabase,basename='globaldata')
 
 urlpatterns = [
-    #path('login/',views.UserLoginApiView.as_view()),
+    path('login/',views.UserLoginApiView.as_view()),
     path('',include(router.urls)),
     #path('globaldata/',views.GlobalDatabase.as_view()),
 
